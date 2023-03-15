@@ -41,15 +41,16 @@ footer {
   bottom: 20px;
   transform: translate(20px, 0px);
   width: 100%;
-  background-color: #e5dc57;
+  background-color: #006fb0;
   border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   padding: 20px;
   max-width: 200px;
+  text-align: center;
 }
 
 p#area {
-  color: #000;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -61,7 +62,7 @@ p#area {
 
 .input-group input {
   border: none;
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 10px;
   font-size: 18px;
   color: #333;
@@ -76,8 +77,9 @@ p#area {
 }
 
 .button {
-  background-color: #e5dc57;
-  color: #000;
+  background-color: #0070b1;
+  color: #fff;
+  font-size: 1.2em;
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -87,7 +89,7 @@ p#area {
 }
 
 .button:hover {
-  background-color: #e5dc57;
+  background-color: #00598d;
 }
 
 .box {
@@ -119,8 +121,11 @@ p#area {
 }
 
 .close-button {
+  background-color: #0070b1;
   cursor: pointer;
   border: none;
+  border-radius: 99999999px;
+  color: #ffffff;
 }
 
 .lista {

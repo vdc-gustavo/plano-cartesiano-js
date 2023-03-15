@@ -48,7 +48,7 @@ function draw() {
 
   axis(true, 25);
 
-  stroke(0, 100, 0);
+  stroke(189, 101, 0);
   strokeWeight(2);
   drawPoints(pontos);
 }
@@ -194,8 +194,8 @@ function drawPoints(pontos) {
       );
     }
   }
-  stroke(124, 76, 236); // define a cor dos pontos como vermelho
-  strokeWeight(10); // define o tamanho dos pontos como 5 pixels
+  stroke(0, 111, 176); // define a cor dos pontos
+  strokeWeight(8); // define o tamanho dos pontos como 5 pixels
   for (let i = 0; i < pontos.length; i++) {
     point(pontos[i].x * zoom, -pontos[i].y * zoom);
   }
