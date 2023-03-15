@@ -23,6 +23,8 @@ function adicionarCoordenada() {
     document.getElementById("area").innerHTML = "A ÁREA É: " + area;
 
     drawPoints(pontos);
+    document.querySelector(".box2").style.display = "block";
+    document.querySelector("#box-a").style.display = "block";
   }
 
   xInput.value = "";
@@ -76,10 +78,17 @@ function renderizarPontos() {
     <div class="lista">
     <span class="ponto">${ponto.x},${ponto.y}</span>
     <button class="close-button" onclick="removerPonto(${index})">X</button>
-    </div>`;
+    </div>
+    `;
     listaPontos.appendChild(item);
   });
 }
+
+// Configure as opções de observação
+const opcoes = { attributes: true, childList: true, subtree: true };
+
+// Comece a observar o elemento
+observer.observe(elementoObservado, opcoes);
 
 function axis(grid, gridAlpha) {
   //abscissa
@@ -87,7 +96,7 @@ function axis(grid, gridAlpha) {
 
   for (let i = 1; i < origin.x / zoom; i++) {
     line(-i * zoom, unitLineSize / 2, -i * zoom, -unitLineSize / 2);
-    
+
     if (grid) {
       push();
       stroke(0, gridAlpha);
@@ -159,7 +168,7 @@ function axis(grid, gridAlpha) {
     noStroke();
     fill(0);
     textSize(unitLineSize * 1.2);
-    
+
     text(-i, -(unitLineSize + textWidth(i)), i * zoom + unitLineSize / 2);
 
     pop();
@@ -169,10 +178,20 @@ function drawPoints(pontos) {
   push();
   if (pontos.length > 1) {
     for (let i = 0; i < pontos.length - 1; i++) {
-      line(pontos[i].x * zoom, -pontos[i].y * zoom, pontos[i + 1].x * zoom, -pontos[i + 1].y * zoom);
+      line(
+        pontos[i].x * zoom,
+        -pontos[i].y * zoom,
+        pontos[i + 1].x * zoom,
+        -pontos[i + 1].y * zoom
+      );
     }
-    if (pontos.length > 2) { 
-      line(pontos[pontos.length - 1].x * zoom, -pontos[pontos.length - 1].y * zoom, pontos[0].x * zoom, -pontos[0].y * zoom);
+    if (pontos.length > 2) {
+      line(
+        pontos[pontos.length - 1].x * zoom,
+        -pontos[pontos.length - 1].y * zoom,
+        pontos[0].x * zoom,
+        -pontos[0].y * zoom
+      );
     }
   }
   stroke(124, 76, 236); // define a cor dos pontos como vermelho
@@ -182,7 +201,6 @@ function drawPoints(pontos) {
   }
   pop();
 }
-
 
 function mouseWheel(event) {
   zoom -= event.delta / 20;

@@ -1,9 +1,9 @@
-html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #fff;
 }
 
 canvas {
@@ -18,36 +18,21 @@ input[type="number"] {
   appearance: textfield;
 }
 
-.input-group {
-  margin-bottom: 10px;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.button {
-  background-color: #8257e5;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  padding: 15px 20px;
-  cursor: pointer;
+li {
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
 }
 
-.button:hover {
-  background-color: #7c4cec;
-}
-
-.box {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  transform: translate(20px, 20px);
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  max-width: 200px;
-  width: 90%;
+li:last-child {
+  border-bottom: none;
 }
 
 footer {
@@ -55,14 +40,18 @@ footer {
   left: 0;
   bottom: 20px;
   transform: translate(20px, 0px);
-
   width: 100%;
-  background-color: #fff;
+  background-color: #e5dc57;
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   padding: 20px;
   max-width: 200px;
- }
+}
+
+p#area {
+  color: #000;
+  font-weight: bold;
+}
 
 .input-group {
   margin-bottom: 20px;
@@ -86,6 +75,35 @@ footer {
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+.button {
+  background-color: #e5dc57;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #e5dc57;
+}
+
+.box {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transform: translate(20px, 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 200px;
+  width: 90%;
+}
+
 .box2 {
   position: fixed;
   z-index: 9998;
@@ -104,26 +122,13 @@ footer {
   cursor: pointer;
   border: none;
 }
-.ponto {
-}
+
 .lista {
   display: flex;
   justify-content: space-between;
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
-li {
-  font-size: 18px;
-  color: #333;
-  padding: 10px;
-  border-bottom: 1px solid #f5f5f5;
+/* Alteração de cores */
+.body {
+  background-color: #fff;
 }
-
-li:last-child {
-  border-bottom: none;
-}
-
